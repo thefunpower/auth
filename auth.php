@@ -130,7 +130,7 @@ if(!function_exists('get_user_acl')){
         if($group_id){
             $acl      = db_get_one("user_group","acl",['id'=>$group_id]);            
         }
-        $acl = array_merge($acl_1,$acl);
+        $acl = array_merge($acl_1?:[],$acl?:[]);
         return $acl?:[];
     }
 }
