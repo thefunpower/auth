@@ -209,3 +209,4 @@ function admin_user($user, $pwd, $tag)
     }
     return $id;
 }
+include __DIR__.'/AuthClass.php';
