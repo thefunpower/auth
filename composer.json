@@ -1,0 +1,22 @@
+{
+    "name": "thefunpower/auth",
+    "type": "library",
+    "description": "sample auth",
+    "keywords": ["php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ken.sun",
+            "email": "kungfutime@foxmail.com" 
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    }, 
+    "autoload": { 
+        "files": [
+            "./auth.php",
+            "./helper.php"
+        ]
+    }
+}
