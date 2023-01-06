@@ -37,7 +37,7 @@
 
 
 
-Copyright © TheFunPower Team & Ken.Sun, Inc. 
+Copyright © TheFunPower Team & Ken.Sun, Inc. Mail: sunkangchina@163.com QQ: 68103403
 
 Permission is hereby granted to any person obtaining a copy of this software
 (the “Software”) to use, copy, modify, merge, publish and/or distribute copies
