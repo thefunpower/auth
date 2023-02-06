@@ -67,6 +67,7 @@ function check_admin_login($url = '')
 {
     if(!cookie(ADMIN_COOKIE_NAME)){ 
         $jump = "/".ADMIN_DIR_NAME."/login.php"; 
+        $url = $_SERVER['REQUEST_URI']; 
         if($url){
             $jump = $jump."?url=".urlencode($url);
         }
