@@ -14,11 +14,12 @@ class AuthClass
     /**
      * 加载权限列表
      */
-    public function load()
+    public function load($opt = ['plugins','modules'])
     {
-        $arr1 = self::_load('plugins')?:[];
-        $arr2 = self::_load('modules')?:[];
-        $arr = $arr2+$arr1;     
+        $arr = [];
+        foreach($opt as $v){
+            $arr = $arr+(self::_load($v)?:[]);
+        }  
         return $arr;
     } 
     public static function _load($dir_name = 'plugins')
