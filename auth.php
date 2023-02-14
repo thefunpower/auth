@@ -8,8 +8,11 @@
 */
 /**
  * 主要服务于后台管理员 
- */
-if(!defined('VERSION')){die();} 
+ */ 
+function auth_login_url(){
+    global $config;
+    return $config['auth_login_url']?:ADMIN_DIR_NAME.'/login.php';
+}
 /**
  * 是否是超及管理员，就是用户ID为1的
  */ 
@@ -66,7 +69,7 @@ function api_is_admin()
 function check_admin_login($url = '')
 {
     if(!cookie(ADMIN_COOKIE_NAME)){ 
-        $jump = "/".ADMIN_DIR_NAME."/login.php"; 
+        $jump = auth_login_url(); 
         $url = $_SERVER['REQUEST_URI']; 
         if($url){
             $jump = $jump."?url=".urlencode($url);
@@ -101,7 +104,7 @@ function has_access($key){
  */
 function access($name,$ret = false){
     if(!is_logined()){
-        jump(ADMIN_DIR_NAME.'/login.php');
+        jump(auth_login_url());
     }
     if(is_admin()){
         return true;
