@@ -1,7 +1,7 @@
 {
     "name": "thefunpower/auth",
     "type": "library",
-    "description": "sample auth",
+    "description": "权限控制",
     "keywords": ["php"],
     "license": "MIT",
     "authors": [
