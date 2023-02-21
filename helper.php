@@ -8,9 +8,7 @@
     Code Vesion: v1.0.x
 */
 
-if (!defined('VERSION')) {
-    die();
-}
+
 /**
  * 所有会员
  */
