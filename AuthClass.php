@@ -27,7 +27,7 @@ class AuthClass
         $li = [];
         $dir = PATH . '/'.$dir_name.'/';
         $actived = has_actived_plugin();
-        $dirs[] = PATH . '/api/';
+        $dirs[] = PATH . '/app/admin/';
         foreach ($actived as $name => $v) {
             $dirs[] = $dir . $name . '/api';
         }
