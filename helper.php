@@ -65,8 +65,8 @@ function get_user_where($where = [])
         $user[$k] = $v;
     }
     $user['group_name'] = user_group_get($user['group_id'])['name'];
-    if ($login['avatar_url']) {
-        //  $user['avatar_url'] = $login['avatar_url'];
+    if (!$user['avatar_url']) {
+         $user['avatar_url'] = $login['avatar_url'];
     }
     return $user;
 }
