@@ -109,14 +109,14 @@ function access($name,$ret = false){
     if(is_admin()){
         return true;
     }
-    $acl = get_user_acl(); 
-    if(in_array($name,$acl)){
-        return true;
-    }
+    $acl = get_user_acl();  
     if(is_array($name) || strpos($name,'|') !== false){
         if(if_access_or($name)){
             return true;
         }
+    }
+    if(in_array($name,$acl)){
+        return true;
     }
     if($ret){
         return false;
