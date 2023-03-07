@@ -113,6 +113,11 @@ function access($name,$ret = false){
     if(in_array($name,$acl)){
         return true;
     }
+    if(is_array($name) || strpos($name,'|') !== false){
+        if(if_access_or($name)){
+            return true;
+        }
+    }
     if($ret){
         return false;
     }
