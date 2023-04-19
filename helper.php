@@ -196,6 +196,7 @@ function admin_user($user, $pwd, $tag)
                 'user'  => $user,
                 'pwd'   => md5($pwd),
                 'tag'   => $tag,
+                'status'=> 1,
                 'created_at' => now()
             ]);
         }
