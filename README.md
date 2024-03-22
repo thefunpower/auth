@@ -11,29 +11,6 @@ composer require thefunpower/auth
 数据库
 
 ~~~
-CREATE TABLE `upload` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `url` varchar(255) NOT NULL COMMENT 'URL',
-  `hash` varchar(255) NOT NULL COMMENT '唯一值',
-  `user_id` int(11) DEFAULT NULL COMMENT '用户ID',
-  `mime` varchar(255) NOT NULL COMMENT '类型',
-  `size` decimal(20,2) NOT NULL COMMENT '大小',
-  `ext` varchar(10) NOT NULL COMMENT '后缀',
-  `created_at` datetime NOT NULL COMMENT '创建时间',
-  `name` varchar(255) DEFAULT NULL COMMENT '文件名',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='上传文件';
-
-CREATE TABLE `sms` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL COMMENT '接收者',
-  `body` text COMMENT '消息内容',
-  `status` tinyint(1) DEFAULT '0' COMMENT '状态',
-  `created_at` datetime NOT NULL COMMENT '发送时间',
-  `updated_at` datetime NOT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
-
 CREATE TABLE `login` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `unionid` varchar(255) DEFAULT NULL COMMENT 'unionid',
